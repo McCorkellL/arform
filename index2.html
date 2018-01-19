@@ -16,15 +16,24 @@
         <!-- <a-scene embedded arjs='sourceType: webcam; sourceWidth: 240; sourceHeight: 180;'> -->		
 	<!-- <a-scene arjs='sourceType: image; sourceUrl:../../data/images/screenshot.png'> -->
 	<!-- <a-scene embedded arjs='sourceType: image; sourceUrl:../../data/images/armchair.jpg;'> -->
+		
+		
+  
+
 
 		<a-assets>
-			<a-asset-item id="assetAframe" src="models/ply/aframe.ply"></a-asset-item>
+			<!-- <a-asset-item id="assetAframe" src="models/ply/aframe.ply"></a-asset-item> -->
+			<video id="bunny" src="movies/BigBuckBunny_640x360-exp.mp4" autoplay loop="true></video>
 		</a-assets>
 
 		<!-- <a-marker type='unknown'> -->
-		<a-entity ply-model="src: #assetAframe" rotation='-90 90 0' scale='0.1 0.1 0.1'></a-entity>
+		<!-- <a-entity ply-model="src: #assetAframe" rotation='-90 90 0' scale='0.1 0.1 0.1'></a-entity> -->
+							    
+		<!-- Using the asset management system. -->
+ 		<a-video src="#bunny" width="360" height="270" position="0 0 -20"></a-video>
 
-		<a-marker-camera preset='hiro'></a-marker-camera>
+		<!-- <a-marker-camera preset='hiro'></a-marker-camera> -->					 
+		<a-marker type='pattern' url='data/ma-marker.patt' >
 	</a-scene>
 </body>
 </html>
